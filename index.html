@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>إبراهيم | واجهة أسطورية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --primary: #58a6ff;
+      --text: #e6edf3;
+      --secondary: #161b22;
+      --highlight: #1f6feb;
+      --font: 'Cairo', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(145deg, #0d1117, #161b22);
+      text-align: center;
+      padding: 80px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      width: 300%;
+      height: 100%;
+      background: radial-gradient(circle at center, rgba(88,166,255,0.1), transparent 70%);
+      animation: move-bg 20s linear infinite;
+      z-index: 0;
+      left: -100%;
+      top: 0;
+    }
+
+    @keyframes move-bg {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(50%); }
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    header img {
+      width: 130px;
+      filter: drop-shadow(0 0 5px var(--primary));
+      animation: popIn 1s ease;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: var(--primary);
+      animation: fadeUp 1.2s ease;
+    }
+
+    header p {
+      font-size: 20px;
+      opacity: 0.85;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      animation: fadeUp 1.6s ease;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: var(--primary);
+      border-right: 5px solid var(--highlight);
+      padding-right: 15px;
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      padding: 12px 0;
+      border-bottom: 1px solid #2e2e2e;
+    }
+
+    .btn {
+      background: var(--highlight);
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s, background 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: #1a4fd1;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--secondary);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      color: var(--primary);
+      font-size: 28px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: white;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(0.5); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 32px; }
+      .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logoibrahim.svg"/>
+    <h1>إبراهيم</h1>
+    <p>مصمم صفحات هبوط احترافية باستخدام HTML و CSS و JavaScript</p>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <h2>نبذة عني</h2>
+      <p>
+        أنا إبراهيم، أمتلك خبرة في تصميم وتطوير صفحات هبوط عالية الأداء باستخدام تقنيات HTML وCSS، بالإضافة إلى أساسيات JavaScript.
+        أساعد أصحاب الأعمال والمتاجر على تحويل الزوار إلى عملاء من خلال تصاميم سريعة، متجاوبة، ومرتكزة على أهدافهم التسويقية.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>المهارات</h2>
+      <ul>
+        <li>تصميم واجهات باستخدام HTML5 و CSS3</li>
+        <li>تصميم متجاوب مع جميع الأجهزة (Responsive Design)</li>
+        <li>أساسيات JavaScript لعناصر تفاعلية بسيطة</li>
+        <li>استخدام مكتبات مثل Bootstrap و Flexbox</li>
+        <li>تحسين الأداء وتجربة المستخدم</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>تواصل معي</h2>
+      <p>للتواصل حول المشاريع أو طلب عرض سعر، يُرجى النقر على الزر أدناه:</p>
+      <a class="btn" href="https://wa.me/96657665830" target="_blank">راسلني عبر واتساب</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>تابعني على المنصات الاجتماعية:</p>
+    <div class="social-icons">
+      <a href="https://www.tiktok.com/@ibrahim.fe1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.instagram.com/ibrahim.fe1" target="_blank"><i class="fab fa-instagram"></i></a>
+      <!-- <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> -->
+    </div>
+  </footer>
+
+</body>
+</html>
